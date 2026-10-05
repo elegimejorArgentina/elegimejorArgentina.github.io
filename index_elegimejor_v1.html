@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Elegí Mejor Argentina: ideas, productos y soluciones prácticas para organizar y aprovechar mejor tu casa.">
+<meta name="theme-color" content="#7a2638">
+<title>Elegí Mejor Argentina | Soluciones prácticas para tu casa</title>
+<style>
+:root{
+  --bg:#f7f2ec;--surface:#fffdf9;--ink:#282321;--muted:#716963;
+  --wine:#78283a;--wine2:#5f1f2d;--sand:#eaded4;--line:#e4d9d0;
+  --shadow:0 14px 40px rgba(45,28,22,.08);--radius:22px
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+a{text-decoration:none;color:inherit}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(247,242,236,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-size:1.2rem;font-weight:800;letter-spacing:-.04em;color:var(--wine)}
+nav{display:flex;gap:24px;font-size:.9rem;color:var(--muted)}
+nav a:hover{color:var(--wine)}
+.hero{padding:68px 0 58px;border-bottom:1px solid var(--line)}
+.kicker{text-transform:uppercase;letter-spacing:.13em;color:var(--wine);font-size:.72rem;font-weight:800;margin-bottom:14px}
+h1{font-size:clamp(2.7rem,7vw,5.8rem);line-height:.94;letter-spacing:-.065em;max-width:850px;margin:0 0 22px}
+.hero-copy{font-size:1.13rem;color:var(--muted);max-width:650px;margin:0 0 28px}
+.btn{display:inline-block;background:var(--wine);color:#fff;padding:13px 21px;border-radius:999px;font-weight:800}
+.btn:hover{background:var(--wine2)}
+section{padding:58px 0}
+.section-title{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:25px}
+h2{font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.05em;margin:0;line-height:1}
+.section-title p{max-width:500px;color:var(--muted);margin:0}
+.problem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.problem{min-height:145px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;align-items:end;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.problem:before{content:"";position:absolute;width:100px;height:100px;border-radius:50%;right:-32px;top:-35px;background:var(--sand)}
+.problem strong{font-size:1.08rem;position:relative;z-index:1}
+.feature{display:grid;grid-template-columns:1.05fr .95fr;background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
+.feature-visual{min-height:390px;background:linear-gradient(145deg,#eee2d8,#d9c8bc);display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;color:#675b54}
+.visual-box{border:1px dashed rgba(80,60,50,.35);padding:22px;border-radius:18px;max-width:260px}
+.feature-body{padding:40px}
+.feature-body h3{font-size:clamp(1.8rem,4vw,3rem);line-height:1.02;letter-spacing:-.045em;margin:8px 0 14px}
+.feature-body p{color:var(--muted);font-size:1.02rem}
+.meta{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--wine);font-weight:800}
+.product-link{display:inline-block;margin-top:8px;color:var(--wine);font-weight:800}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.product{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.product-img{height:210px;background:var(--sand);display:flex;align-items:center;justify-content:center;text-align:center;color:#6d625b;padding:22px}
+.product-body{padding:22px}.product h3{font-size:1.3rem;line-height:1.12;margin:7px 0 9px}.product p{color:var(--muted);margin:0 0 14px}
+.guides{display:grid;grid-template-columns:1.25fr .75fr;gap:16px}
+.guide-main,.guide-small{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.guide-main{min-height:280px;display:flex;flex-direction:column;justify-content:end}
+.guide-main h3{font-size:2rem;line-height:1.02;letter-spacing:-.04em;margin:8px 0}
+.guide-small{min-height:132px;margin-bottom:16px}.guide-small:last-child{margin-bottom:0}
+.guide-small h3{margin:5px 0;font-size:1.2rem;line-height:1.15}
+.categories{display:flex;flex-wrap:wrap;gap:10px}
+.cat{background:var(--surface);border:1px solid var(--line);padding:12px 17px;border-radius:999px;font-weight:700}
+.cat:hover{border-color:var(--wine);color:var(--wine)}
+.callout{margin-top:18px;background:var(--wine);color:#fff;border-radius:var(--radius);padding:30px}
+.callout h2{margin-bottom:8px}.callout p{margin:0;opacity:.9;max-width:650px}
+.disclosure{border-top:1px solid var(--line);padding:18px 0 0;color:#81766f;font-size:.76rem;margin-top:48px}
+footer{padding:28px 0 45px;color:var(--muted);font-size:.82rem}
+.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:850px){
+ .problem-grid{grid-template-columns:1fr 1fr}.product-grid{grid-template-columns:1fr 1fr}
+ .feature{grid-template-columns:1fr}.feature-visual{min-height:260px}
+ .guides{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+ nav{display:none}.nav{height:64px}.hero{padding:48px 0 42px}
+ section{padding:42px 0}.problem-grid,.product-grid{grid-template-columns:1fr}
+ .feature-body{padding:28px}.feature-visual{min-height:220px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">Elegí Mejor Argentina</a>
+    <nav>
+      <a href="#selecciones">Selecciones</a>
+      <a href="#guias">Guías</a>
+      <a href="#categorias">Categorías</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">Ideas para la vida cotidiana</div>
+    <h1>Tu casa puede funcionar mejor.</h1>
+    <p class="hero-copy">Encontramos ideas y productos para resolver problemas concretos: falta de espacio, desorden, superficies pequeñas y esos rincones que nunca terminan de aprovecharse.</p>
+    <a class="btn" href="#selecciones">Ver qué elegimos</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-title">
+      <h2>Empezá por el problema</h2>
+      <p>No necesitás saber qué producto buscar. Primero contanos qué querés resolver.</p>
+    </div>
+    <div class="problem-grid">
+      <a class="problem" href="#selecciones"><strong>Tengo poco espacio</strong></a>
+      <a class="problem" href="#guias"><strong>Mi cocina es chica</strong></a>
+      <a class="problem" href="#guias"><strong>Quiero ordenar mejor</strong></a>
+      <a class="problem" href="#guias"><strong>Tengo rincones desaprovechados</strong></a>
+    </div>
+  </div>
+</section>
+
+<section id="selecciones">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>Una solución para empezar</h2>
+      <p>Una recomendación concreta, elegida para resolver una necesidad cotidiana.</p>
+    </div>
+
+    <article class="feature">
+      <div class="feature-visual">
+        <div class="visual-box">
+          <strong>En esta sección irá la foto real del producto.</strong><br><br>
+          No usamos imágenes inventadas ni fotos generadas que puedan mostrar un producto diferente.
+        </div>
+      </div>
+      <div class="feature-body">
+        <div class="meta">Casa conectada · Producto recomendado</div>
+        <h3>Enchufe inteligente WiFi Tuya 220V 16A</h3>
+        <p>Una forma sencilla de convertir un aparato convencional en un dispositivo que podés controlar desde el celular y vincular con asistentes compatibles.</p>
+        <p><strong>¿Para quién tiene sentido?</strong><br>
+        Para quien quiere automatizar una lámpara, ventilador u otro aparato compatible sin cambiar toda la instalación.</p>
+        <a class="product-link" href="https://www.mercadolibre.com.ar/enchufe-inteligente-wifi-tuya-220v-16a-control-remoto-alexa-google-smart-life-smartis/p/MLA61577787?pdp_filters=item_id%3AMLA1572359425#origin=share&sid=share&wid=MLA1572359425" target="_blank" rel="noopener noreferrer">Ver producto en Mercado Libre →</a>
+      </div>
+    </article>
+
+    <div class="product-grid" style="margin-top:18px">
+      <article class="product">
+        <div class="product-img">Próxima selección<br>Organización de cocina</div>
+        <div class="product-body">
+          <div class="meta">Cocina</div>
+          <h3>Cómo ganar espacio sin hacer reformas</h3>
+          <p>Vamos a reunir productos que resuelvan un problema específico, no simplemente productos “bonitos”.</p>
+          <a class="product-link" href="#guias">Ver guía →</a>
+        </div>
+      </article>
+      <article class="product">
+        <div class="product-img">Próxima selección<br>Espacios pequeños</div>
+        <div class="product-body">
+          <div class="meta">Espacios pequeños</div>
+          <h3>El espacio que ya tenés, pero no estás usando</h3>
+          <p>Ideas para puertas, paredes, rincones y lugares difíciles de aprovechar.</p>
+          <a class="product-link" href="#guias">Ver guía →</a>
+        </div>
+      </article>
+      <article class="product">
+        <div class="product-img">Próxima selección<br>Limpieza</div>
+        <div class="product-body">
+          <div class="meta">Limpieza</div>
+          <h3>Ordenar sin llenar todo de muebles</h3>
+          <p>Accesorios simples para mantener juntos los productos que más usás.</p>
+          <a class="product-link" href="#guias">Ver guía →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="guias">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>Guías que sirven</h2>
+      <p>Antes de recomendarte algo, también queremos mostrarte qué podés resolver sin comprar nada.</p>
+    </div>
+    <div class="guides">
+      <article class="guide-main">
+        <div class="meta">Organización · Guía destacada</div>
+        <h3>5 formas de aprovechar el espacio debajo de la mesada</h3>
+        <p>Desde separar productos de limpieza hasta sumar superficies de guardado, hay más posibilidades de las que parece.</p>
+        <a class="product-link" href="#">Leer la guía →</a>
+      </article>
+      <div>
+        <article class="guide-small">
+          <div class="meta">Cocina</div>
+          <h3>Cómo ordenar una cocina pequeña sin hacer reformas</h3>
+          <a class="product-link" href="#">Leer →</a>
+        </article>
+        <article class="guide-small">
+          <div class="meta">Espacios pequeños</div>
+          <h3>¿Dónde guardar lo que nunca tiene lugar?</h3>
+          <a class="product-link" href="#">Leer →</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="categorias">
+  <div class="wrap">
+    <div class="section-title">
+      <h2>Explorá</h2>
+    </div>
+    <div class="categories">
+      <a class="cat" href="#">Cocina</a>
+      <a class="cat" href="#">Baño</a>
+      <a class="cat" href="#">Limpieza</a>
+      <a class="cat" href="#">Organización</a>
+      <a class="cat" href="#">Espacios pequeños</a>
+      <a class="cat" href="#">Casa conectada</a>
+    </div>
+    <div class="callout">
+      <h2>Menos vueltas. Mejores decisiones.</h2>
+      <p>La idea es simple: encontrar un problema real, comparar soluciones y recomendar solamente lo que tenga sentido para resolverlo.</p>
+    </div>
+    <div class="disclosure">
+      Algunos enlaces de productos pueden ser enlaces de afiliado. Si realizás una compra desde uno de ellos, podemos recibir una comisión, sin costo adicional para vos.
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© Elegí Mejor Argentina</span>
+    <span>Antes de comprar, elegí mejor.</span>
+  </div>
+</footer>
+</body>
+</html>
